@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro Clock</title>
+</head>
+<body onload="template()">
+    <div class="container">
+        <!-- Mean Heading -->
+        <h1 class="text-center my-5 heading mean">Pomodoro App</h1>
+        <!-- heading -->
+        <h2 class="text-center my-5 heading">Seassion</h2>
+        <!-- Main Timer -->
+        <div class="container timer">
+            <div class="row">
+                <div class="col-5">
+                    <h4 id="minutes"></h4>
+                </div>
+                <div class="col-2">
+                    <h4>:</h4>
+                </div>
+                <div class="col-5">
+                    <h4 id="seconds"></h4>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 id="done" class="text-center my-5"></h3>
+        </div>
+        <!-- Start and Reset Buttons -->
+        <div class="container d-flex justify-content-center align-items-center my-5">
+            <button class="btn" onclick="start()"><i class="fas fa-play fa-2x "></i></button>
+            <button class="btn" onclick="stop()"><i class="fas fa-pause fa-2x"></i></button>
+            <a href="index.html" class="btn" onclick="reset()"><i class="fas fa-redo-alt fa-2x " onclick="reset()"></i></a>
+        </div>
+    </div>
+    <div class="container">
+        <!-- heading -->
+        <h3 class="text-center my-5 heading">Break</h3>
+        <!-- Main Timer -->
+        <div class="container timer">
+            <div class="row">
+                <div class="col-5">
+                    <h4 id="minutes2"></h4>
+                </div>
+                <div class="col-2">
+                    <h4>:</h4>
+                </div>
+                <div class="col-5">
+                    <h4 id="seconds2"></h4>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 id="done2" class="text-center my-5"></h3>
+        </div>
+        <!-- Start and Reset Buttons -->
+        <div class="container d-flex justify-content-center align-items-center my-5">
+            <button class="btn" onclick="stopped()"><i class="fas fa-play fa-2x "></i></button>
+            <button class="btn" onclick="alarmstop"><i class="fas fa-pause fa-2x"></i></button>
+            <a href="index.html" class="btn" onclick="reset()"><i class="fas fa-redo-alt fa-2x " onclick="reset()"></i></a>
+        </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- My JS -->
+    <script src="app.js"></script>
+</body>
+</html>
